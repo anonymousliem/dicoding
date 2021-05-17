@@ -1,0 +1,22 @@
+{
+  "name": "submission",
+  "version": "1.0.0",
+  "description": "submission dicoding",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/server.js",
+    "lint": "eslint ./src"
+  },
+  "author": "anonymousliem",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^20.1.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.2",
+    "nodemon": "^2.0.7"
+  }
+}
