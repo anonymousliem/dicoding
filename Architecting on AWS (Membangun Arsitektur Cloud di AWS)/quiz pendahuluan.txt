@@ -1,0 +1,42 @@
+1. Memilih database yang tepat dengan memperhitungkan pola akses (pattern) data adalah salah satu penerapan pilar ...
+A. Operational Excellence 
+<b>B. Security </b>
+C. Reliability
+D. Performance Efficiency
+E. Cost Optimization
+
+2. Manakah dari berikut ini yang termasuk AWS Global Infrastructure?
+Regions
+VPC
+Edge Locations
+Amazon DynamoDB
+AWS Lambda
+
+<b>A. 1 dan 3</b>
+B. 2 dan 3
+C. 3 dan 5
+D. 4 dan 5
+ 
+
+3. Menggunakan AWS IAM User daripada root user adalah salah satu contoh implementasi best practice dari pilar ...
+A. Operational Excellence
+<b>B.Security</b>
+C. Reliability
+D. Performance Efficiency
+ 
+
+
+4. Prinsip Operations as Code termasuk best practice dari pilar ...
+<b>A. Operational Excellence</b>
+B. Security
+C. Reliability
+D. Performance Efficiency
+ 
+5. AWS Regions memiliki sedikitnya ...
+A. Satu Availability Zone
+<b>B. Dua Availability Zone</b>
+C. Tiga Availability Zone
+D. Empat Availability Zone
+
+
+
