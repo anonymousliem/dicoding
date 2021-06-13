@@ -1,0 +1,24 @@
+1. Amazon S3 Glacier sebaiknya digunakan untuk keperluan akses data yang lebih cepat dari S3 Standard.
+ 
+ A. Benar
+ B. Salah ✅ 
+
+2. Cara termudah untuk memiliki fungsi backup/restore di Amazon S3 adalah ...
+ A. Mengaktifkan AWS Backup
+ B. Mengaktifkan Versioning ✅
+ C. Menjalankan Lambda function
+ D. Membackup dari akun AWS lain
+ 
+3. Untuk menggunakan Amazon S3, Anda harus menggunakan EC2 instance.
+ A. Benar
+ B. Salah✅
+
+4. Anda ingin mengoptimalkan biaya penggunaan S3 tetapi masih ragu-ragu dikarenakan pola akses datanya yang tidak terprediksi. Storage class apa yang sebaiknya Anda gunakan?
+ A. S3 Standard
+ B. Glacier
+ C. S3 Intelligent Tiering ✅
+ D. S3 Standard - Infrequent Access
+ 
+5. Amazon S3 dapat diakses dari seluruh dunia.
+ A. Benar ✅
+ B. Salah
