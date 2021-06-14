@@ -1,0 +1,32 @@
+nb : jawaban dibawah ini 4/5 Benar, please pull request jika anda benar semua
+
+1. Anda perlu memastikan agar EC2 instance yang akan digunakan sesuai dengan kebijakan standar perusahaan, layanan apa yang sebaiknya Anda gunakan?
+ A. Amazon EBS ✅
+ B. Amazon EFS
+ C. Image Enforcer
+ D. EC2 Image Builder
+ 
+2. Layanan apa yang memungkinkan Anda berbagi akses read/write (baca/tulis) antar beberapa EC2 instance?
+ A. Amazon EBS
+ B. Amazon EFS ✅
+ C. AMI
+ D. IAM
+ 
+3. Dari jenis harga EC2 berikut, mana yang paling mahal jika digunakan pada jangka waktu yang sama?
+ A. On-Demand ✅
+ B. Reserved Instance
+ C. Spot
+ D. Savings Plans
+ 
+4. Anda membutuhkan solusi file sharing untuk Windows Server Anda, layanan apa yang sebaiknya digunakan?
+ A. Amazon EBS
+ B. Amazon EFS
+ C. Amazon FSx ✅
+ D. AMI
+ 
+5. Anda membutuhkan instance dengan kemampuan terbaik, sebaiknya jenis harga mana yang Anda pilih?
+ A. On-Demand 
+ B. Reserved Instance
+ C. Spot
+ D. Savings Plans
+ E. Tidak ada perbedaan ✅
