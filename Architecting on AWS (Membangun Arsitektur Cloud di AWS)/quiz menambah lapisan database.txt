@@ -1,0 +1,39 @@
+1. Aplikasi Anda saat ini menggunakan database MySQL. Layanan apa yang dapat dipertimbangkan saat akan bermigrasi ke AWS?
+ A. PostgreSQL
+ B. Amazon Redshift
+ C. Amazon Aurora ✅
+ D. Amazon DynamoDB
+ 
+2. Dari pilihan ini, mana saja yang merupakan layanan Database Relasional?
+PostgreSQL
+Amazon Aurora
+Amazon DynamoDB
+Amazon KeySpaces
+ A. 1 dan 2 ✅
+ B. 1 dan 3
+ C. 3 dan 2
+ D. 3 dan 4
+ 
+3. Saat ini Anda sedang membuat aplikasi dan mempertimbangkan penggunaan layanan antara PostgreSQL atau MySQL. Anda tidak ingin mengelola server database dan hanya ingin fokus ke pengembangan aplikasi saja. Layanan apa yang sebaiknya Anda gunakan?
+ A. PostgreSQL Serverless
+ B. Amazon Redshift Serverless
+ C. Amazon Aurora Serverless ✅
+ D. Amazon DynamoDB Serverless
+ 
+4. Anda sedang merencanakan migrasi dari database on-premise berbasis SQL ke AWS. Anda ingin memanfaatkan keunggulan Amazon Aurora. Layanan apa yang sebaiknya Anda gunakan?
+ A. PostgreSQL Serverless
+ B. Amazon Redshift Serverless
+ C. Amazon Aurora Serverless ✅
+ D. Amazon DynamoDB Serverless
+ 
+5. Dari pilihan ini, mana saja yang merupakan layanan Database Nonrelasional?
+PostgreSQL
+Amazon Aurora
+Amazon DynamoDB
+Amazon KeySpaces
+Amazon Redshift
+ A. 1 dan 2
+ B. 2 dan 3
+ C. 3 dan 4 ✅
+ D. 4 dan 5
+ 
