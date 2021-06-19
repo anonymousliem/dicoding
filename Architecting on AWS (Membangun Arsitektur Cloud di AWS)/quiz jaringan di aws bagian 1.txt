@@ -1,0 +1,29 @@
+1. Jika panah ke kanan (→)  menunjukkan hubungan “berada di dalam”, manakah pilihan yang paling benar?
+ A. Region → VPC → Subnets
+ B. Subnets → Region → VPC
+ C. Subnets → VPC → Region ✅
+ D. VPC → Subnets → Region
+ 
+2. Security Group bersifat . . . sedangkan Network ACL bersifat . . .
+ A. Stateless, Stateless
+ B. Stateless, Stateful
+ C. Stateful, Stateless ✅
+ D. Stateful, Stateful
+ 
+3. Saat ini, dalam satu akun AWS Anda dapat memiliki maksimal . . . VPC.
+ A. Dua
+ B. Tiga
+ C. Empat
+ D. Lima ✅
+ 
+4. Berdasarkan praktik terbaik (best practice), IP di private subnet sebaiknya … dibandingkan public subnet.
+ A. Lebih banyak ✅
+ B. Lebih sedikit
+ C. Sama banyaknya
+ D. Berbeda
+ 
+5. jika Anda membuat sebuah layanan web, manakah di antara pilihan ini yang sebaiknya Anda gunakan?
+ A. Internet Gateway ✅
+ B. NAT Gateway
+ C. Peering Gateway
+ D. Direct Connect
