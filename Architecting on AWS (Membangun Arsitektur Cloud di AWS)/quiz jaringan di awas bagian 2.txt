@@ -1,0 +1,29 @@
+1. Anda ingin menggunakan Load Balancer untuk membagi beban antara dua instance web server. Load Balancer apa yang sebaiknya Anda gunakan?
+ A. Application Load Balancer ✅
+ B. Network Load Balancer
+ C. Classic Load Balancer
+ D. Premium Load Balancer
+ 
+2. Anda perlu menghubungkan EC2 instance dengan Amazon S3 di Region yang sama melalui alamat IP private tanpa menggunakan jaringan internet. Layanan apa yang sebaiknya digunakan?
+ A. Transit Gateway
+ B. Peering Gateway
+ C. VPC Endpoints ✅
+ D. Amazon CloudFront
+ 
+3. Anda memiliki dua VPC di dua Region berbeda, misalnya di Amerika Serikat dan Eropa. Layanan apa yang sebaiknya Anda gunakan untuk melakukan failover aplikasi antara dua region tersebut?
+ A. AWS Direct Connect
+ B. VPC Peering
+ C. Amazon Route 53 ✅
+ D. Amazon CloudFront
+ 
+4. Berapa jumlah Availability Zone yang AWS sarankan sebagai dasar dalam mendesain arsitektur untuk mencapai High Availability?
+ A. Satu
+ B. Dua ✅
+ C. Tiga
+ D. Empat
+
+5. Anda perlu menghubungkan data center on-premise dengan VPC di AWS melalui koneksi privat yang terdedikasi (dedicated connection). Dari pilihan berikut, layanan apa yang bisa digunakan?
+ A. AWS Virtual Private Network
+ B. Virtual Private Gateway
+ C. VPC Peering
+ D. AWS Direct Connect ✅
