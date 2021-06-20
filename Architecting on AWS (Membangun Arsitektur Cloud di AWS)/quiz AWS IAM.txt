@@ -1,0 +1,20 @@
+1. Dari opsi berikut ini, mana sajakah langkah terbaik untuk mengamankan root account Anda di AWS.
+Aktifkan Multi-Factor Authentication.
+Gunakan untuk akses sehari-hari.
+Berikan kredensial ke semua orang di tim.
+Buat AWS IAM users, groups, dan roles untuk akses akun sehari-hari.
+ A. 1 dan 2
+ B. 1 dan 4 ✅
+ C. 2 dan 3
+ D. 2 dan 4
+ 
+ 
+2. Bagaimana praktik terbaik (best practice) dalam mengatur akses untuk banyak akun (multiple accounts) AWS?
+ A. Menggunakan Terraform
+ B. Scripting
+ C. AWS Organizations ✅
+ D. AWS Regions
+ 
+3. Bisakah kita menggunakan akun Google sebagai federated account di AWS?
+ A. Tidak. AWS hanya mengizinkan penggunaan akun amazon.com.
+ B. Ya. AWS memungkinkan penggunaan akun lain di luar AWS. ✅
