@@ -1,0 +1,29 @@
+1. Aurora Serverless menggunakan teknik … untuk melayani permintaan.
+ A. Vertical Scaling ✅
+ B. Horizontal Scaling
+ C. Push Button Scaling
+ D. Sharding
+ 
+2. Auto Scaling dengan Load Balancer cocok digunakan untuk beban kerja seperti . . .
+ A. Web Server ✅
+ B. Database Server
+ C. File Server
+ D. Tidak bisa dikombinasikan
+ 
+3. Amazon CloudWatch menyimpan … sedangkan AWS CloudTrail menyimpan . . .
+ A. Data Metric, Data Audit ✅
+ B. Data Biaya, Data Audit
+ C. Data Audit, Data Metric
+ D. Data User, Data Biaya
+ 
+4. Berapa lama AWS Cost Explorer dapat menganalisis data?
+ A. 3 Tahun
+ B. 2 Tahun
+ C. 15 Bulan
+ D. 13 Bulan ✅
+ 
+5. Amazon DynamoDB menggunakan teknik …. untuk melayani permintaan.
+ A. Vertical Scaling
+ B. Horizontal Scaling ✅
+ C. Push Button
+ D. Sharding
