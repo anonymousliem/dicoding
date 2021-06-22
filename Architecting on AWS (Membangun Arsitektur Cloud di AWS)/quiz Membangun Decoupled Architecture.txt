@@ -1,0 +1,18 @@
+1. Amazon SNS memungkinkan kita menggunakan teknik . . . untuk menghilangkan ketergantungan antar sistem.
+ A. Antrean
+ B. Notifikasi ✅
+ C. Moderasi
+ D. Deduplikasi
+ 
+2. Arsitektur three tier adalah contoh arsitektur yang ...
+ A. Tightly Integrated
+ B. Loosely Integrated
+ C. Tidak Bisa Dipastikan ✅
+ D. Moderately Integrated
+ 
+.
+3. Amazon SQS memungkinkan kita menggunakan teknik . . . untuk menghilangkan ketergantungan antar sistem.
+ A. Antrean ✅
+ B. Notifikasi
+ C. Deduplikasi
+ D. Moderasi
