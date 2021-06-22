@@ -1,0 +1,17 @@
+1. Mana langkah yang paling tepat untuk mempercepat waktu respons aplikasi kita?
+ A. Menggunakan Amazon CloudFront untuk caching static content. ✅
+ B. Meningkatkan kapasitas mesin EC2 yang digunakan.
+ C. Menambahkan Availability Zone ke arsitektur aplikasi kita.
+ D. Migrasi database ke Amazon Aurora.
+ 
+2. Manakah yang bukan merupakan strategi caching database?
+ A. Write Through
+ B. Lazy Loading
+ C. Delayed Loading ✅
+ D. TTL (Time to Live)
+ 
+3. Untuk meningkatkan performa dari database DynamoDB, kita dapat menggunakan layanan cache yaitu …
+ A. Redis
+ B. DAX ✅
+ C. Amazon CloudFront
+ D. Kafka
