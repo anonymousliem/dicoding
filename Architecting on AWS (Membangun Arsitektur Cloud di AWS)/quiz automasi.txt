@@ -1,0 +1,26 @@
+1. Anda memiliki tiga lingkungan untuk pengembangan aplikasi yaitu DEV, UAT, dan PROD. Ketiganya menggunakan sumber daya AWS yang sama, hanya kapasitasnya saja yang berbeda. Manakah pendekatan penggunaan CloudFormation template yang paling tepat?
+ A. Masing-masing lingkungan memiliki CloudFormation template terpisah.
+ B. Satu CloudFormation template dengan Conditions untuk membedakan lingkungan. ✅
+ C. Satu CloudFormation template dengan constant (konstanta) untuk membedakan lingkungan.
+ 
+2. Jika kita ingin fokus hanya kepada pengembangan aplikasi saja, maka layanan automasi yang cocok adalah ...
+ A. AWS CloudFormation
+ B. AWS Elastic Beanstalk ✅
+ C. Amazon EC2
+ D. Amazon RDS
+ 
+3. Dari opsi di bawah ini, mana sajakah opsi format template yang dapat diterima oleh AWS CloudFormation.
+JSON
+YAML
+CSV
+PPTX
+ A. 1 dan 2 ✅
+ B. 2 dan 3
+ C. 1 dan 3
+ D. 1 dan 4
+ 
+4. Untuk membuat automasi kegiatan maintenance rutin OS seperti instalasi patch, di AWS kita bisa menggunakan layanan ...
+A. Amazon Kinesis
+B. AWS AMI
+C. AWS Systems Manager ✅
+D. AWS CloudFormation
