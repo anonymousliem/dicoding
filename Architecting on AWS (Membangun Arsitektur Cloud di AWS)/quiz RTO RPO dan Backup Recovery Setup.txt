@@ -1,0 +1,18 @@
+1. Untuk mem-backup data dari on-premise ke AWS kita dapat menggunakan ...
+ A. AWS Storage Gateway ✅
+ B. AWS Direct Connect
+ C. AWS Data Exchange
+ D. Amazon EC2
+ 
+2. Agar kita dapat memulihkan data saat dibutuhkan, maka kita harus melakukan ...
+ A. High Availability
+ B. Backup ✅
+ C. Audit
+ D. RPO
+ 
+3. Manajemen perusahaan menginginkan layanan aplikasi dapat kembali pulih dalam jangka waktu maksimal 3 jam setelah terjadi bencana (disaster), ini disebut ...
+ A. RTO ✅
+ B. RPO
+ C. ROP
+ D. TOR
+ 
