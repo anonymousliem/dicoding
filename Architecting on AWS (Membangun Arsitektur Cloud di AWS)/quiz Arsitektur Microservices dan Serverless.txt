@@ -1,0 +1,17 @@
+1. Cara terbaik untuk menjalankan arsitektur microservices adalah dengan menggunakan ...
+ A. Amazon EC2
+ B. Container ✅
+ C. VM
+ D. Physical Servers
+ 
+2. Untuk mengatur aliran proses dari setiap Lambda function kita dapat menggunakan ...
+ A. Lambda@Edge
+ B. AWS Step Function ✅
+ C. Orchestration
+ D. Lambda Timer
+
+3. Saat ini, AWS Lambda dapat menjalankan kode Anda untuk selama maksimum ... menit.
+ A. 12
+ B. 15 ✅
+ C. 10
+ D. 20
