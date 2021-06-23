@@ -1,0 +1,17 @@
+ 1. Jika kita sudah mengetahui rata-rata penggunaan dari sumber daya EC2 yang digunakan, kita bisa menurunkan biaya dengan beralih ke instance ...
+ A. On-demand
+ B. Reserved ✅
+ C. Spot
+ D. Bid
+ 
+2. Keamanan dari aplikasi adalah tanggung jawab ...
+ A. Anda ✅
+ B. AWS
+ C. AWS dan Anda
+ D. Pemerintah
+
+3. Layanan AWS yang berperan dalam mengalihkan sistem Anda dari Region A ke Region B adalah ...
+ A. Amazon CloudFront
+ B. AWS CloudFormation
+ C. AWS Lambda
+ D. Amazon Route 53 ✅
