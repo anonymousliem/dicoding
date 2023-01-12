@@ -1,21 +1,2594 @@
 {
-  "name": "notes-app-back-end",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./src/server.js",
-    "lint": "eslint ./src"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "nodemon": "^2.0.7"
-  },
-  "dependencies": {
-    "@hapi/hapi": "^20.1.3",
-    "nanoid": "^3.1.23"
-  }
+	"pse_spec": [
+		{
+			"pse_job_name": "blt-content-gqlcontetslot-search",
+			"spec": {
+				"nsqd": [
+					{
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "channel-nsqd"
+					},
+					{
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "category-nsqd"
+					},
+					{
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "play-interactive-nsqd"
+					}
+				],
+				"redis": [
+					{
+						"skipped": false,
+						"hostgroup": "play-redis",
+						"proxy_max": 2,
+						"proxy_min": 1
+					},
+					{
+						"skipped": false,
+						"hostgroup": "broadcaster-redis",
+						"proxy_max": 2,
+						"proxy_min": 1
+					},
+					{
+						"skipped": false,
+						"hostgroup": "broadcaster-report-redis",
+						"proxy_max": 2,
+						"proxy_min": 1
+					}
+				],
+				"scylla": null,
+				"stubby": null,
+				"postgres": [
+					{
+						"pitr": "pitr",
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "category-postgres",
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "play-postgres",
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "broadcaster-postgres",
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "broadcaster-report-postgres",
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "play-interactive-postgres",
+						"post_action": "post-action"
+					}
+				],
+				"autoscale": [
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "play-grpc"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "category"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "play-es-nginx"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "broadcaster-grpc"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "broadcaster-report-grpc"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "play-interactive-grpc"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "r3-play"
+					}
+				],
+				"cassandra": null,
+				"elastic_search": [
+					{
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "play-es",
+						"is_restore": false,
+						"is_master_only": true
+					}
+				]
+			},
+			"pse_job_id": 49
+		},
+		{
+			"pse_job_name": "blt-content-rilisanspesial-run",
+			"spec": {
+				"nsqd": [
+					{
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "channel-nsqd"
+					},
+					{
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "category-nsqd"
+					},
+					{
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "play-interactive-nsqd"
+					}
+				],
+				"redis": [
+					{
+						"skipped": false,
+						"hostgroup": "play-redis",
+						"proxy_max": 2,
+						"proxy_min": 1
+					},
+					{
+						"skipped": false,
+						"hostgroup": "broadcaster-redis",
+						"proxy_max": 2,
+						"proxy_min": 1
+					},
+					{
+						"skipped": false,
+						"hostgroup": "broadcaster-report-redis",
+						"proxy_max": 2,
+						"proxy_min": 1
+					}
+				],
+				"scylla": null,
+				"stubby": null,
+				"postgres": [
+					{
+						"pitr": "pitr",
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "category-postgres",
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "play-postgres",
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "broadcaster-postgres",
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "broadcaster-report-postgres",
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "play-interactive-postgres",
+						"post_action": "post-action"
+					}
+				],
+				"autoscale": [
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "play-grpc"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "category"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "play-es-nginx"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "broadcaster-grpc"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "broadcaster-report-grpc"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "play-interactive-grpc"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "r3-play"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "product-agg-grpc"
+					}
+				],
+				"cassandra": null,
+				"elastic_search": [
+					{
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "play-es",
+						"is_restore": false,
+						"is_master_only": true
+					}
+				]
+			},
+			"pse_job_id": 50
+		},
+		{
+			"pse_job_name": "blt-discovery-campaign-run-ht4",
+			"spec": {
+				"nsqd": [
+					{
+						"priority": 1,
+						"snapshot": "snapshot",
+						"hostgroup": "udc-nsqd",
+						"depends_on": []
+					},
+					{
+						"skipped": true,
+						"priority": 0,
+						"hostgroup": "nsqd-tokopoints",
+						"depends_on": null
+					},
+					{
+						"priority": 1,
+						"snapshot": "snapshot",
+						"hostgroup": "promo-catalog-nsqd",
+						"depends_on": []
+					},
+					{
+						"priority": 1,
+						"snapshot": "snapshot",
+						"hostgroup": "tokopoints-nsqd",
+						"depends_on": []
+					}
+				],
+				"redis": [
+					{
+						"priority": 1,
+						"hostgroup": "useroauth-redis",
+						"proxy_max": 2,
+						"proxy_min": 1,
+						"depends_on": []
+					},
+					{
+						"priority": 1,
+						"hostgroup": "user-cache-redis",
+						"proxy_max": 2,
+						"proxy_min": 1,
+						"depends_on": []
+					},
+					{
+						"priority": 1,
+						"hostgroup": "udc-redis",
+						"proxy_max": 2,
+						"proxy_min": 1,
+						"depends_on": []
+					},
+					{
+						"priority": 1,
+						"hostgroup": "r3-generator-redis",
+						"proxy_max": 2,
+						"proxy_min": 1,
+						"depends_on": []
+					},
+					{
+						"priority": 1,
+						"hostgroup": "r3-mind-redis",
+						"proxy_max": 2,
+						"proxy_min": 1,
+						"depends_on": []
+					},
+					{
+						"priority": 1,
+						"hostgroup": "personalization-redis",
+						"proxy_max": 2,
+						"proxy_min": 1,
+						"depends_on": []
+					},
+					{
+						"priority": 1,
+						"hostgroup": "flashsale-redis",
+						"proxy_max": 2,
+						"proxy_min": 1,
+						"depends_on": []
+					},
+					{
+						"priority": 1,
+						"hostgroup": "promo-catalog-redis",
+						"proxy_max": 2,
+						"proxy_min": 1,
+						"depends_on": []
+					},
+					{
+						"priority": 1,
+						"hostgroup": "tokopoints-redis",
+						"proxy_max": 2,
+						"proxy_min": 1,
+						"depends_on": []
+					},
+					{
+						"priority": 1,
+						"hostgroup": "recommendation-cache-redis",
+						"proxy_max": 2,
+						"proxy_min": 1,
+						"depends_on": []
+					},
+					{
+						"priority": 1,
+						"hostgroup": "merchant-promotion-aggregator-redis",
+						"proxy_max": 2,
+						"proxy_min": 1,
+						"depends_on": []
+					},
+					{
+						"priority": 1,
+						"hostgroup": "merchant-voucher-redis",
+						"proxy_max": 2,
+						"proxy_min": 1,
+						"depends_on": []
+					},
+					{
+						"priority": 1,
+						"hostgroup": "campaign-thematic-redis",
+						"proxy_max": 2,
+						"proxy_min": 1,
+						"depends_on": []
+					}
+				],
+				"postgres": [
+					{
+						"pitr": "pitr",
+						"priority": 1,
+						"snapshot": "snapshot",
+						"hostgroup": "discopage-postgres",
+						"depends_on": [],
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"priority": 1,
+						"snapshot": "snapshot",
+						"hostgroup": "user-auth-postgres",
+						"depends_on": [],
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"priority": 1,
+						"snapshot": "snapshot",
+						"hostgroup": "udc-postgres",
+						"depends_on": [],
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"priority": 1,
+						"snapshot": "snapshot",
+						"hostgroup": "campaign-postgres-master",
+						"depends_on": [],
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"priority": 1,
+						"snapshot": "snapshot",
+						"hostgroup": "campaign-postgres-replica",
+						"depends_on": [],
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"priority": 1,
+						"snapshot": "snapshot",
+						"hostgroup": "promo-catalog-postgres",
+						"depends_on": [],
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"priority": 1,
+						"snapshot": "snapshot",
+						"hostgroup": "tokopoints-postgres",
+						"depends_on": [],
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"priority": 1,
+						"snapshot": "snapshot",
+						"hostgroup": "recommendation-postgres",
+						"depends_on": [],
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"priority": 1,
+						"snapshot": "snapshot",
+						"hostgroup": "thematic-postgres",
+						"depends_on": [],
+						"post_action": "post-action"
+					},
+					{
+						"skipped": true,
+						"priority": 0,
+						"hostgroup": "thematic-postgres-background",
+						"depends_on": null
+					}
+				],
+				"autoscale": [
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 1,
+						"hostgroup": "discopage",
+						"depends_on": [
+							"rollout-manager",
+							"oauthapp-http"
+						]
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 1,
+						"hostgroup": "rollout-manager",
+						"depends_on": []
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 1,
+						"hostgroup": "oauthapp-http",
+						"depends_on": [
+							"useroauth-redis",
+							"user-cache-redis",
+							"user-auth-postgres"
+						]
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 1,
+						"hostgroup": "user-data-center",
+						"depends_on": [
+							"udc-postgres",
+							"udc-redis",
+							"udc-nsqd"
+						]
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 1,
+						"hostgroup": "personalization",
+						"depends_on": [
+							"personalization-cassandra",
+							"r3-generator-redis",
+							"r3-mind-redis",
+							"personalization-redis",
+							"rollout-manager",
+							"oauthapp-http",
+							"category"
+						]
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 1,
+						"hostgroup": "category",
+						"depends_on": []
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 1,
+						"hostgroup": "campaign-non-tx",
+						"depends_on": [
+							"campaign-postgres-master",
+							"campaign-postgres-replica",
+							"campaign-es",
+							"campaign-es7",
+							"flashsale-redis"
+						]
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 1,
+						"hostgroup": "promo-catalog",
+						"depends_on": [
+							"promo-catalog-redis",
+							"tokopoints-redis",
+							"promo-catalog-postgres",
+							"tokopoints-postgres",
+							"nsqd-tokopoints",
+							"tokopoints-points",
+							"promo-catalog-nsq",
+							"promo-catalog-nsqd",
+							"tokopoints-nsq",
+							"tokopoints-nsqd"
+						]
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 1,
+						"hostgroup": "tokopoints-points",
+						"depends_on": []
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 1,
+						"hostgroup": "promo-catalog-nsq",
+						"depends_on": []
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 1,
+						"hostgroup": "tokopoints-nsq",
+						"depends_on": []
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 1,
+						"hostgroup": "r3",
+						"depends_on": [
+							"recommendation-postgres",
+							"recommendation-cache-redis",
+							"home-product-r3-es",
+							"category"
+						]
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 1,
+						"hostgroup": "merchant-promotion-aggregator",
+						"depends_on": [
+							"tokopoints-points",
+							"merchant-promotion-aggregator-redis",
+							"merchant-voucher-redis",
+							"sp-api-go"
+						]
+					},
+					{
+						"skipped": true,
+						"priority": 0,
+						"hostgroup": "sp-api-go",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 1,
+						"hostgroup": "campaign-thematic",
+						"depends_on": [
+							"campaign-thematic-es",
+							"campaign-thematic-redis",
+							"thematic-postgres",
+							"thematic-postgres-background"
+						]
+					}
+				],
+				"cassandra": [
+					{
+						"priority": 1,
+						"hostgroup": "personalization-cassandra",
+						"clone_data": true,
+						"depends_on": [],
+						"endpoint_snitch": "SimpleSnitch"
+					}
+				],
+				"elastic_search": [
+					{
+						"priority": 1,
+						"snapshot": "snapshot",
+						"hostgroup": "campaign-es",
+						"depends_on": [],
+						"is_restore": true,
+						"is_master_only": false
+					},
+					{
+						"priority": 1,
+						"snapshot": "snapshot",
+						"hostgroup": "campaign-es7",
+						"depends_on": [],
+						"is_restore": true,
+						"is_master_only": false
+					},
+					{
+						"priority": 1,
+						"snapshot": "snapshot",
+						"hostgroup": "home-product-r3-es",
+						"depends_on": [],
+						"is_restore": true,
+						"is_master_only": false
+					},
+					{
+						"priority": 1,
+						"snapshot": "snapshot",
+						"hostgroup": "campaign-thematic-es",
+						"depends_on": [],
+						"is_restore": true,
+						"is_master_only": false
+					}
+				]
+			},
+			"pse_job_id": 157
+		},
+		{
+			"pse_job_name": "blt-gamification-leaderboard-ht4",
+			"spec": {
+				"nsqd": [
+					{
+						"priority": 0,
+						"hostgroup": "leaderboard-nsqd",
+						"depends_on": null
+					},
+					{
+						"priority": 0,
+						"hostgroup": "sauron-nsqd",
+						"depends_on": null
+					}
+				],
+				"redis": [
+					{
+						"priority": 0,
+						"hostgroup": "leaderboard-engine-redis",
+						"proxy_max": 1,
+						"proxy_min": 1,
+						"depends_on": null
+					},
+					{
+						"priority": 0,
+						"hostgroup": "trivia-engine-redis",
+						"proxy_max": 1,
+						"proxy_min": 1,
+						"depends_on": null
+					}
+				],
+				"postgres": [
+					{
+						"priority": 0,
+						"hostgroup": "watchtower-digital-postgres",
+						"depends_on": null
+					},
+					{
+						"priority": 0,
+						"hostgroup": "leaderboard-postgres",
+						"depends_on": null
+					},
+					{
+						"priority": 0,
+						"hostgroup": "trivia-postgres",
+						"depends_on": null
+					},
+					{
+						"priority": 0,
+						"hostgroup": "sauron-postgres",
+						"depends_on": null
+					}
+				],
+				"autoscale": [
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "sauron-http",
+						"depends_on": [
+							"sauron-nsqd",
+							"sauron-postgres",
+							"watchtower-digital-postgres"
+						]
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "leaderboard-engine",
+						"depends_on": [
+							"leaderboard-nsqd",
+							"leaderboard-engine-redis",
+							"leaderboard-postgres",
+							"sauron-http"
+						]
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "scheduler-engine",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "oauthapp-http",
+						"depends_on": null
+					}
+				]
+			},
+			"pse_job_id": 107
+		},
+		{
+			"pse_job_name": "blt-gamification-questwidgetflow-ht4",
+			"spec": {
+				"nsqd": [
+					{
+						"skipped": false,
+						"hostgroup": "quest-engine-nsqd"
+					}
+				],
+				"redis": [
+					{
+						"skipped": false,
+						"hostgroup": "quest-engine-redis",
+						"proxy_max": 1,
+						"proxy_min": 1
+					}
+				],
+				"scylla": null,
+				"stubby": null,
+				"postgres": [
+					{
+						"pitr": "",
+						"skipped": false,
+						"snapshot": "",
+						"hostgroup": "quest-engine-postgres",
+						"post_action": ""
+					}
+				],
+				"autoscale": [
+					{
+						"max": 1,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "quest-engine-grpc"
+					}
+				],
+				"cassandra": null,
+				"elastic_search": null
+			},
+			"pse_job_id": 108
+		},
+		{
+			"pse_job_name": "blt-campaign-gqlcheckcampaignnotifyme",
+			"spec": {
+				"nsqd": [
+					{
+						"skipped": false,
+						"hostgroup": "campaign-nsqd"
+					},
+					{
+						"skipped": false,
+						"hostgroup": "goods-nsqd"
+					}
+				],
+				"redis": [
+					{
+						"skipped": false,
+						"hostgroup": "flashsale-redis",
+						"proxy_max": 1,
+						"proxy_min": 1
+					},
+					{
+						"skipped": true,
+						"hostgroup": "fux-redis",
+						"proxy_max": 1,
+						"proxy_min": 1
+					},
+					{
+						"skipped": false,
+						"hostgroup": "slash-price-redis",
+						"proxy_max": 1,
+						"proxy_min": 1
+					},
+					{
+						"skipped": true,
+						"hostgroup": "slash-price-redis-replica-tx",
+						"proxy_max": 1,
+						"proxy_min": 1
+					},
+					{
+						"skipped": true,
+						"hostgroup": "flashsale-redis-replica-tx",
+						"proxy_max": 1,
+						"proxy_min": 1
+					},
+					{
+						"skipped": false,
+						"hostgroup": "goods-cache-redis",
+						"proxy_max": 1,
+						"proxy_min": 1
+					},
+					{
+						"skipped": false,
+						"hostgroup": "useroauth-redis",
+						"proxy_max": 1,
+						"proxy_min": 1
+					},
+					{
+						"skipped": true,
+						"hostgroup": "user-cache-redis",
+						"proxy_max": 1,
+						"proxy_min": 1
+					},
+					{
+						"skipped": true,
+						"hostgroup": "redis-intools",
+						"proxy_max": 1,
+						"proxy_min": 1
+					},
+					{
+						"skipped": true,
+						"hostgroup": "session-redis",
+						"proxy_max": 1,
+						"proxy_min": 1
+					},
+					{
+						"skipped": true,
+						"hostgroup": "session-redis-ws",
+						"proxy_max": 1,
+						"proxy_min": 1
+					}
+				],
+				"scylla": null,
+				"stubby": null,
+				"postgres": [
+					{
+						"pitr": "",
+						"skipped": false,
+						"snapshot": "",
+						"hostgroup": "campaigndb-postgres",
+						"post_action": ""
+					},
+					{
+						"pitr": "",
+						"skipped": false,
+						"snapshot": "",
+						"hostgroup": "rbacapp-postgres",
+						"post_action": ""
+					},
+					{
+						"pitr": "",
+						"skipped": false,
+						"snapshot": "",
+						"hostgroup": "user-auth-postgres",
+						"post_action": ""
+					},
+					{
+						"pitr": "",
+						"skipped": false,
+						"snapshot": "",
+						"hostgroup": "userapp-postgres",
+						"post_action": ""
+					}
+				],
+				"autoscale": [
+					{
+						"max": 1,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "campaign-non-tx"
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "dfp"
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "accountsapp"
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "userapp"
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"skipped": true,
+						"hostgroup": "search-product6-nginx"
+					}
+				],
+				"cassandra": [
+					{
+						"skipped": false,
+						"hostgroup": "campaign-cassandra",
+						"clone_data": false,
+						"endpoint_snitch": "SimpleSnitch"
+					}
+				],
+				"elastic_search": [
+					{
+						"skipped": false,
+						"snapshot": "",
+						"hostgroup": "campaign-es",
+						"is_restore": false,
+						"is_master_only": false
+					}
+				]
+			},
+			"pse_job_id": 99
+		},
+		{
+			"pse_job_name": "blt-content-gqlchannelslot-run",
+			"spec": {
+				"nsqd": [
+					{
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "channel-nsqd"
+					},
+					{
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "category-nsqd"
+					},
+					{
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "play-interactive-nsqd"
+					}
+				],
+				"redis": [
+					{
+						"skipped": false,
+						"hostgroup": "play-redis",
+						"proxy_max": 2,
+						"proxy_min": 1
+					},
+					{
+						"skipped": false,
+						"hostgroup": "broadcaster-redis",
+						"proxy_max": 2,
+						"proxy_min": 1
+					},
+					{
+						"skipped": false,
+						"hostgroup": "broadcaster-report-redis",
+						"proxy_max": 2,
+						"proxy_min": 1
+					}
+				],
+				"scylla": null,
+				"stubby": null,
+				"postgres": [
+					{
+						"pitr": "pitr",
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "category-postgres",
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "play-postgres",
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "broadcaster-postgres",
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "broadcaster-report-postgres",
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "play-interactive-postgres",
+						"post_action": "post-action"
+					}
+				],
+				"autoscale": [
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "play-grpc"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "category"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "play-es-nginx"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "broadcaster-grpc"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "broadcaster-report-grpc"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "play-interactive-grpc"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "r3-play"
+					}
+				],
+				"cassandra": null,
+				"elastic_search": [
+					{
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "play-es",
+						"is_restore": false,
+						"is_master_only": true
+					}
+				]
+			},
+			"pse_job_id": 95
+		},
+		{
+			"pse_job_name": "blt-content-visitchannel-gql",
+			"spec": {
+				"nsqd": [
+					{
+						"priority": 0,
+						"snapshot": "snapshot",
+						"hostgroup": "kero-nsqd",
+						"depends_on": null
+					},
+					{
+						"priority": 0,
+						"snapshot": "snapshot",
+						"hostgroup": "orderapp-nsqd",
+						"depends_on": null
+					}
+				],
+				"redis": [
+					{
+						"priority": 0,
+						"hostgroup": "broadcaster-report-redis",
+						"proxy_max": 1,
+						"proxy_min": 1,
+						"depends_on": null
+					},
+					{
+						"priority": 0,
+						"hostgroup": "favorite-redis",
+						"proxy_max": 1,
+						"proxy_min": 1,
+						"depends_on": null
+					},
+					{
+						"skipped": true,
+						"priority": 0,
+						"hostgroup": "shop-misc-redis",
+						"depends_on": null
+					},
+					{
+						"skipped": true,
+						"priority": 0,
+						"hostgroup": "shop-cache-redis-proxy-non-tx",
+						"depends_on": null
+					},
+					{
+						"priority": 0,
+						"hostgroup": "kero-redis",
+						"depends_on": null
+					},
+					{
+						"priority": 0,
+						"hostgroup": "kero-addr-redis",
+						"depends_on": null
+					},
+					{
+						"priority": 0,
+						"hostgroup": "mp-logistic-redis",
+						"depends_on": null
+					},
+					{
+						"priority": 0,
+						"hostgroup": "transaction-data-redis",
+						"depends_on": null
+					},
+					{
+						"priority": 0,
+						"hostgroup": "transaction-cache-redis",
+						"depends_on": null
+					}
+				],
+				"postgres": [
+					{
+						"pitr": "pitr",
+						"priority": 0,
+						"snapshot": "snapshot",
+						"hostgroup": "broadcaster-report-postgres",
+						"depends_on": null,
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"priority": 0,
+						"snapshot": "snapshot",
+						"hostgroup": "product-postgres-bg",
+						"depends_on": null,
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"skipped": true,
+						"priority": 0,
+						"snapshot": "snapshot",
+						"hostgroup": "shop-postgres",
+						"depends_on": null,
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"skipped": true,
+						"priority": 0,
+						"snapshot": "snapshot",
+						"hostgroup": "shop-postgres-replica",
+						"depends_on": null,
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"priority": 0,
+						"snapshot": "snapshot",
+						"hostgroup": "kero-postgres",
+						"depends_on": null,
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"priority": 0,
+						"snapshot": "snapshot",
+						"hostgroup": "kero-postgres-cron",
+						"depends_on": null,
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"priority": 0,
+						"snapshot": "snapshot",
+						"hostgroup": "kero-addr-postgres",
+						"depends_on": null,
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"priority": 0,
+						"snapshot": "snapshot",
+						"hostgroup": "orderapp-postgres-replica",
+						"depends_on": null,
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"priority": 0,
+						"snapshot": "snapshot",
+						"hostgroup": "orderapp-postgres",
+						"depends_on": null,
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"skipped": true,
+						"priority": 0,
+						"snapshot": "snapshot",
+						"hostgroup": "campaigndb-postgres-replica",
+						"depends_on": null,
+						"post_action": "post-action"
+					}
+				],
+				"autoscale": [
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "broadcaster-report-grpc",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "tome-internal",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "oauth-http",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "notifier",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "reputation",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "campaign-non-tx",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "insight",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "openapi",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "shop-location",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "restriction-engine-replica-bo",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "oauthapp-grpc",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "rbacapp",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "rollout-manager",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "kero",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "kero-addr",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "restriction-engine",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "mp-logistic",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "orderapp-others",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "checkoutapp-checkout-non-tx",
+						"depends_on": null
+					}
+				],
+				"cassandra": [
+					{
+						"priority": 0,
+						"hostgroup": "shop-cassandra",
+						"clone_data": true,
+						"depends_on": null,
+						"endpoint_snitch": "SimpleSnitch"
+					},
+					{
+						"priority": 0,
+						"hostgroup": "shop-product-cassandra",
+						"clone_data": true,
+						"depends_on": null,
+						"endpoint_snitch": "SimpleSnitch"
+					}
+				],
+				"elastic_search": [
+					{
+						"priority": 0,
+						"snapshot": "snapshot",
+						"hostgroup": "orderapp-es",
+						"depends_on": null,
+						"is_restore": false,
+						"is_master_only": false
+					}
+				]
+			},
+			"pse_job_id": 141
+		},
+		{
+			"pse_job_name": "blt-dummy-dipta",
+			"spec": {
+				"nsqd": [
+					{
+						"skipped": false,
+						"hostgroup": "muslim-nsqd"
+					}
+				],
+				"redis": null,
+				"scylla": null,
+				"stubby": null,
+				"postgres": null,
+				"autoscale": [
+					{
+						"max": 1,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "blacklist-http"
+					}
+				],
+				"cassandra": null,
+				"elastic_search": null
+			},
+			"pse_job_id": 82
+		},
+		{
+			"pse_job_name": "blt-content-channeldetail-swipe",
+			"spec": {
+				"nsqd": [
+					{
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "channel-nsqd"
+					},
+					{
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "category-nsqd"
+					},
+					{
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "play-interactive-nsqd"
+					}
+				],
+				"redis": [
+					{
+						"skipped": false,
+						"hostgroup": "play-redis",
+						"proxy_max": 2,
+						"proxy_min": 1
+					},
+					{
+						"skipped": false,
+						"hostgroup": "broadcaster-redis",
+						"proxy_max": 2,
+						"proxy_min": 1
+					},
+					{
+						"skipped": false,
+						"hostgroup": "broadcaster-report-redis",
+						"proxy_max": 2,
+						"proxy_min": 1
+					}
+				],
+				"scylla": null,
+				"stubby": null,
+				"postgres": [
+					{
+						"pitr": "pitr",
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "category-postgres",
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "play-postgres",
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "broadcaster-postgres",
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "broadcaster-report-postgres",
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "play-interactive-postgres",
+						"post_action": "post-action"
+					}
+				],
+				"autoscale": [
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "play-grpc"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "category"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "play-es-nginx"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "broadcaster-grpc"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "broadcaster-report-grpc"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "play-interactive-grpc"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "r3-play"
+					}
+				],
+				"cassandra": null,
+				"elastic_search": [
+					{
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "play-es",
+						"is_restore": false,
+						"is_master_only": true
+					}
+				]
+			},
+			"pse_job_id": 94
+		},
+		{
+			"pse_job_name": "blt-content-feed-like",
+			"spec": {
+				"nsqd": [
+					{
+						"skipped": true,
+						"hostgroup": "feeds-nsqd"
+					}
+				],
+				"redis": [
+					{
+						"skipped": true,
+						"hostgroup": "feeds-redis",
+						"proxy_max": 4,
+						"proxy_min": 2
+					}
+				],
+				"scylla": null,
+				"stubby": null,
+				"postgres": [
+					{
+						"pitr": "",
+						"skipped": true,
+						"snapshot": "",
+						"hostgroup": "feeds-viewer-postgres",
+						"post_action": ""
+					},
+					{
+						"pitr": "",
+						"skipped": true,
+						"snapshot": "",
+						"hostgroup": "feeds-v2-postgres",
+						"post_action": ""
+					},
+					{
+						"pitr": "",
+						"skipped": true,
+						"snapshot": "",
+						"hostgroup": "broadcaster-postgres",
+						"post_action": ""
+					}
+				],
+				"autoscale": [
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": true,
+						"hostgroup": "oauthapp-grpc"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": true,
+						"hostgroup": "accountsapp"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "feeds-like"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "feedx-grpc"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "feeds-broker"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "feeds-profile-grpc"
+					}
+				],
+				"cassandra": null,
+				"elastic_search": [
+					{
+						"skipped": true,
+						"snapshot": "",
+						"hostgroup": "feeds-es",
+						"is_restore": null,
+						"is_master_only": true
+					}
+				]
+			},
+			"pse_job_id": 80
+		},
+		{
+			"pse_job_name": "blt-content-gqlcontetslot-feedtab",
+			"spec": {
+				"nsqd": [
+					{
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "channel-nsqd"
+					},
+					{
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "category-nsqd"
+					},
+					{
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "play-interactive-nsqd"
+					}
+				],
+				"redis": [
+					{
+						"skipped": false,
+						"hostgroup": "play-redis",
+						"proxy_max": 2,
+						"proxy_min": 1
+					},
+					{
+						"skipped": false,
+						"hostgroup": "broadcaster-redis",
+						"proxy_max": 2,
+						"proxy_min": 1
+					},
+					{
+						"skipped": false,
+						"hostgroup": "broadcaster-report-redis",
+						"proxy_max": 2,
+						"proxy_min": 1
+					}
+				],
+				"scylla": null,
+				"stubby": null,
+				"postgres": [
+					{
+						"pitr": "pitr",
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "category-postgres",
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "play-postgres",
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "broadcaster-postgres",
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "broadcaster-report-postgres",
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "play-interactive-postgres",
+						"post_action": "post-action"
+					}
+				],
+				"autoscale": [
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "play-grpc"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "category"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "play-es-nginx"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "broadcaster-grpc"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "broadcaster-report-grpc"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "play-interactive-grpc"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "r3-play"
+					}
+				],
+				"cassandra": null,
+				"elastic_search": [
+					{
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "play-es",
+						"is_restore": false,
+						"is_master_only": true
+					}
+				]
+			},
+			"pse_job_id": 96
+		},
+		{
+			"pse_job_name": "blt-content-trackviewer-gql",
+			"spec": {
+				"nsqd": [
+					{
+						"priority": 0,
+						"snapshot": "snapshot",
+						"hostgroup": "kero-nsqd",
+						"depends_on": null
+					},
+					{
+						"priority": 0,
+						"snapshot": "snapshot",
+						"hostgroup": "orderapp-nsqd",
+						"depends_on": null
+					}
+				],
+				"redis": [
+					{
+						"priority": 0,
+						"hostgroup": "broadcaster-report-redis",
+						"proxy_max": 1,
+						"proxy_min": 1,
+						"depends_on": null
+					},
+					{
+						"priority": 0,
+						"hostgroup": "favorite-redis",
+						"proxy_max": 1,
+						"proxy_min": 1,
+						"depends_on": null
+					},
+					{
+						"skipped": true,
+						"priority": 0,
+						"hostgroup": "shop-misc-redis",
+						"depends_on": null
+					},
+					{
+						"skipped": true,
+						"priority": 0,
+						"hostgroup": "shop-cache-redis-proxy-non-tx",
+						"depends_on": null
+					},
+					{
+						"priority": 0,
+						"hostgroup": "kero-redis",
+						"depends_on": null
+					},
+					{
+						"priority": 0,
+						"hostgroup": "kero-addr-redis",
+						"depends_on": null
+					},
+					{
+						"priority": 0,
+						"hostgroup": "mp-logistic-redis",
+						"depends_on": null
+					},
+					{
+						"priority": 0,
+						"hostgroup": "transaction-data-redis",
+						"depends_on": null
+					},
+					{
+						"priority": 0,
+						"hostgroup": "transaction-cache-redis",
+						"depends_on": null
+					}
+				],
+				"postgres": [
+					{
+						"pitr": "pitr",
+						"priority": 0,
+						"snapshot": "snapshot",
+						"hostgroup": "broadcaster-report-postgres",
+						"depends_on": null,
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"priority": 0,
+						"snapshot": "snapshot",
+						"hostgroup": "product-postgres-bg",
+						"depends_on": null,
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"skipped": true,
+						"priority": 0,
+						"snapshot": "snapshot",
+						"hostgroup": "shop-postgres",
+						"depends_on": null,
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"skipped": true,
+						"priority": 0,
+						"snapshot": "snapshot",
+						"hostgroup": "shop-postgres-replica",
+						"depends_on": null,
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"priority": 0,
+						"snapshot": "snapshot",
+						"hostgroup": "kero-postgres",
+						"depends_on": null,
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"priority": 0,
+						"snapshot": "snapshot",
+						"hostgroup": "kero-postgres-cron",
+						"depends_on": null,
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"priority": 0,
+						"snapshot": "snapshot",
+						"hostgroup": "kero-addr-postgres",
+						"depends_on": null,
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"priority": 0,
+						"snapshot": "snapshot",
+						"hostgroup": "orderapp-postgres-replica",
+						"depends_on": null,
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"priority": 0,
+						"snapshot": "snapshot",
+						"hostgroup": "orderapp-postgres",
+						"depends_on": null,
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"skipped": true,
+						"priority": 0,
+						"snapshot": "snapshot",
+						"hostgroup": "campaigndb-postgres-replica",
+						"depends_on": null,
+						"post_action": "post-action"
+					}
+				],
+				"autoscale": [
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "broadcaster-report-grpc",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "product-agg",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "tome-internal",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "oauth-http",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "notifier",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "reputation",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "campaign-non-tx",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "insight",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "openapi",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "shop-location",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "restriction-engine-replica-bo",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "oauthapp-grpc",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "rbacapp",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "rollout-manager",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "kero",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "kero-addr",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "restriction-engine",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "mp-logistic",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "orderapp-others",
+						"depends_on": null
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "checkoutapp-checkout-non-tx",
+						"depends_on": null
+					}
+				],
+				"cassandra": [
+					{
+						"priority": 0,
+						"hostgroup": "shop-cassandra",
+						"clone_data": true,
+						"depends_on": null,
+						"endpoint_snitch": "SimpleSnitch"
+					},
+					{
+						"priority": 0,
+						"hostgroup": "shop-product-cassandra",
+						"clone_data": true,
+						"depends_on": null,
+						"endpoint_snitch": "SimpleSnitch"
+					}
+				],
+				"elastic_search": [
+					{
+						"priority": 0,
+						"snapshot": "snapshot",
+						"hostgroup": "orderapp-es",
+						"depends_on": null,
+						"is_restore": false,
+						"is_master_only": false
+					}
+				]
+			},
+			"pse_job_id": 140
+		},
+		{
+			"pse_job_name": "blt-discovery-home-gcp-run-ht4-nohttp",
+			"spec": {
+				"other": [
+					{
+						"problem": "mysql - unsupproted yet - cloudsql - gcp",
+						"priority": 1,
+						"hostgroup": "enterpriseapp-intools-uam-mysql-reader",
+						"depends_on": []
+					},
+					{
+						"problem": "mysql - unsupproted yet - cloudsql - gcp",
+						"priority": 1,
+						"hostgroup": "enterpriseapp-intools-uam-mysql-writer",
+						"depends_on": []
+					},
+					{
+						"problem": "mysql - unsupproted yet - cloudsql - gcp",
+						"priority": 1,
+						"hostgroup": "notifier-mysql-reader",
+						"depends_on": []
+					},
+					{
+						"problem": "mysql - unsupproted yet - cloudsql - gcp",
+						"priority": 1,
+						"hostgroup": "notifier-mysql-writer",
+						"depends_on": []
+					}
+				]
+			},
+			"pse_job_id": 145
+		},
+		{
+			"pse_job_name": "blt-gamification-nurturing-ht4",
+			"spec": {
+				"nsqd": [
+					{
+						"priority": 0,
+						"hostgroup": "sauron-nsqd",
+						"depends_on": null
+					},
+					{
+						"priority": 0,
+						"hostgroup": "gamification-engine-nsqd",
+						"depends_on": null
+					}
+				],
+				"redis": [
+					{
+						"priority": 0,
+						"hostgroup": "gamification-engine-redis",
+						"depends_on": null
+					}
+				],
+				"postgres": [
+					{
+						"priority": 0,
+						"hostgroup": "gamification-engine-postgres",
+						"depends_on": null
+					},
+					{
+						"priority": 0,
+						"hostgroup": "sauron-postgres",
+						"depends_on": null
+					},
+					{
+						"priority": 0,
+						"hostgroup": "watchtower-digital-postgres",
+						"depends_on": null
+					}
+				],
+				"autoscale": [
+					{
+						"priority": 0,
+						"hostgroup": "gamification-engine-grpc",
+						"depends_on": [
+							"gamification-engine-redis",
+							"gamification-engine-nsqd",
+							"gamification-engine-postgres"
+						]
+					},
+					{
+						"priority": 0,
+						"hostgroup": "gamification-engine-nsq",
+						"depends_on": null
+					},
+					{
+						"priority": 0,
+						"hostgroup": "promo-quota-lucky-egg",
+						"depends_on": null
+					},
+					{
+						"priority": 0,
+						"hostgroup": "personalization",
+						"depends_on": null
+					},
+					{
+						"priority": 0,
+						"hostgroup": "gratification-engine-http",
+						"depends_on": null
+					},
+					{
+						"priority": 0,
+						"hostgroup": "sauron",
+						"depends_on": [
+							"sauron-nsqd",
+							"sauron-postgres",
+							"watchtower-digital-postgres"
+						]
+					},
+					{
+						"priority": 0,
+						"hostgroup": "oauthapp-http",
+						"depends_on": null
+					}
+				]
+			},
+			"pse_job_id": 142
+		},
+		{
+			"pse_job_name": "blt-ancalagon-promowp-ht4",
+			"spec": {
+				"other": [
+					{
+						"problem": "mysql - vm instance - legacy - gcp",
+						"priority": 1,
+						"hostgroup": "microsite-mysql",
+						"depends_on": []
+					}
+				],
+				"redis": [
+					{
+						"skipped": true,
+						"priority": 1,
+						"hostgroup": "microsite-redis",
+						"proxy_max": 1,
+						"proxy_min": 1,
+						"depends_on": []
+					}
+				]
+			},
+			"pse_job_id": 130
+		},
+		{
+			"pse_job_name": "blt-cms-ht4-run",
+			"spec": {
+				"postgres": [
+					{
+						"pitr": "pitr",
+						"priority": 0,
+						"snapshot": "snapshot",
+						"hostgroup": "seller-education-postgres",
+						"depends_on": null,
+						"post_action": "post-action"
+					}
+				],
+				"autoscale": [
+					{
+						"max": 1,
+						"min": 1,
+						"priority": 0,
+						"hostgroup": "seller-education",
+						"depends_on": null
+					}
+				],
+				"elastic_search": [
+					{
+						"skipped": true,
+						"priority": 0,
+						"snapshot": "snapshot",
+						"hostgroup": "seller-education-es",
+						"depends_on": null,
+						"is_restore": true,
+						"is_master_only": false
+					}
+				]
+			},
+			"pse_job_id": 81
+		},
+		{
+			"pse_job_name": "blt-content-getchannelstatus-gql",
+			"spec": {
+				"nsqd": [
+					{
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "channel-nsqd"
+					},
+					{
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "category-nsqd"
+					},
+					{
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "play-interactive-nsqd"
+					}
+				],
+				"redis": [
+					{
+						"skipped": false,
+						"hostgroup": "play-redis",
+						"proxy_max": 2,
+						"proxy_min": 1
+					},
+					{
+						"skipped": false,
+						"hostgroup": "broadcaster-redis",
+						"proxy_max": 2,
+						"proxy_min": 1
+					},
+					{
+						"skipped": false,
+						"hostgroup": "broadcaster-report-redis",
+						"proxy_max": 2,
+						"proxy_min": 1
+					}
+				],
+				"scylla": null,
+				"stubby": null,
+				"postgres": [
+					{
+						"pitr": "pitr",
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "category-postgres",
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "play-postgres",
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "broadcaster-postgres",
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "broadcaster-report-postgres",
+						"post_action": "post-action"
+					},
+					{
+						"pitr": "pitr",
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "play-interactive-postgres",
+						"post_action": "post-action"
+					}
+				],
+				"autoscale": [
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "play-grpc"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "category"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "play-es-nginx"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "broadcaster-grpc"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "broadcaster-report-grpc"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "play-interactive-grpc"
+					},
+					{
+						"max": 2,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "r3-play"
+					}
+				],
+				"cassandra": null,
+				"elastic_search": [
+					{
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "play-es",
+						"is_restore": false,
+						"is_master_only": true
+					}
+				]
+			},
+			"pse_job_id": 48
+		},
+		{
+			"pse_job_name": "blt-content-summariesbluk-gql",
+			"spec": {
+				"nsqd": null,
+				"redis": [
+					{
+						"skipped": false,
+						"hostgroup": "broadcaster-report-redis",
+						"proxy_max": 2,
+						"proxy_min": 1
+					}
+				],
+				"scylla": null,
+				"stubby": null,
+				"postgres": [
+					{
+						"pitr": "pitr",
+						"skipped": false,
+						"snapshot": "snapshot",
+						"hostgroup": "broadcaster-report-postgres",
+						"post_action": "post-action"
+					}
+				],
+				"autoscale": [
+					{
+						"max": 1,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "broadcaster-grpc"
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "broadcaster-report-grpc"
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "groupchat-socketv2"
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "tome-internal"
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "notifier"
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "oauthapp-http"
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "product-agg"
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "toko"
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "ongkirapp"
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"skipped": true,
+						"hostgroup": "merchant-data-center"
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "insight"
+					},
+					{
+						"max": 1,
+						"min": 1,
+						"skipped": false,
+						"hostgroup": "reputation"
+					}
+				],
+				"cassandra": null,
+				"elastic_search": null
+			},
+			"pse_job_id": 112
+		},
+		{
+			"pse_job_name": "blt-discovery-home-gcp-run-ht4-nohttp-dynamicchannel",
+			"spec": {
+				"redis": [
+					{
+						"skipped": true,
+						"priority": 1,
+						"hostgroup": "product-review-redis",
+						"proxy_max": 1,
+						"proxy_min": 1,
+						"depends_on": []
+					}
+				]
+			},
+			"pse_job_id": 146
+		}
+	],
+	"total": 100
 }
